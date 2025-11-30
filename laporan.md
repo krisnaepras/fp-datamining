@@ -236,6 +236,14 @@ Cluster yang terbentuk cenderung memisahkan:
 
 Gambar 3 (lihat `figures/kmeans_clustering_comparison.png`) memperlihatkan pemisahan cluster pada ruang fitur PTR dan PLR untuk ketiga varian patterned dataset, sedangkan Gambar 4 (lihat `figures/clustering_metrics_heatmap.png`) menyajikan ringkasan skor delapan metrik clustering.
 
+Ringkasan numerik nilai metrik clustering untuk masing‑masing patterned dataset ditunjukkan pada tabel berikut, yang dihasilkan dari dataframe `clustering_metrics`:
+
+| Dataset  | N   | NMI  | V-measure | Homogeneity | ARI  | Avg Score |
+|---------|-----|------|-----------|-------------|------|-----------|
+| Complete| 909 | 0,930| 0,930     | 0,930       | 0,961| 0,911     |
+| Crash   |  86 | 0,773| 0,773     | 0,771       | 0,821| 0,783     |
+| Moon    | 100 | 0,761| 0,761     | 0,758       | 0,808| 0,773     |
+
 ### 4.4 Hasil Deteksi Diamond Crash
 
 Dengan menggunakan definisi Diamond Crash pada Subbagian 3.4.2, diperoleh sekitar **86 peristiwa Diamond Crash** selama periode pengamatan. Peristiwa ini tersebar cukup merata sepanjang periode, dengan rata‑rata beberapa peristiwa per bulan.
@@ -248,6 +256,16 @@ Setiap peristiwa dicatat bersama informasi:
 - harga maksimum hingga akhir bulan.
 
 Ringkasan frekuensi Diamond Crash per bulan kemudian digunakan pada tahap perhitungan ROI dan evaluasi strategi.
+
+Contoh struktur isi dataframe `doge_diamond_crash_events` yang memuat beberapa peristiwa Diamond Crash pertama ditunjukkan pada tabel berikut:
+
+| DC Date    | Year-Month | DC Price | PTR    | D Max Price | D ROI (%) | M Max Price | M ROI (%) |
+|-----------|------------|----------|--------|-------------|-----------|-------------|-----------|
+| 2023-06-04| 2023-06    | 0,07247  | 99,36  | 0,07263     | 0,22      | 0,07263     | 0,22      |
+| 2023-06-22| 2023-06    | 0,06564  | 97,31  | 0,06966     | 6,12      | 0,06966     | 6,12      |
+| 2023-07-06| 2023-07    | 0,06503  | 99,39  | 0,06580     | 1,19      | 0,08334     | 28,17     |
+| 2023-07-16| 2023-07    | 0,06955  | 94,33  | 0,07275     | 4,60      | 0,08334     | 19,82     |
+| 2023-08-02| 2023-08    | 0,07421  | 97,24  | 0,07489     | 0,92      | 0,07715     | 3,96      |
 
 ### 4.5 Hasil Perhitungan D ROI dan M ROI
 
@@ -264,6 +282,30 @@ Ringkasan statistik D ROI dan M ROI dari seluruh peristiwa Diamond Crash ditunju
 | Akumulasi D ROI               | 265,74%      |
 | Akumulasi M ROI               | 1287,09%     |
 | Rasio M ROI terhadap D ROI    | 4,84×        |
+
+Ringkasan D ROI rata‑rata, M ROI rata‑rata, dan jumlah peristiwa Diamond Crash per bulan (`T_DC`) yang dihitung dari dataframe `doge_monthly_roi_summary` ditunjukkan pada tabel berikut:
+
+| Year-Month | D ROI Avg (%) | M ROI Avg (%) | T_DC |
+|-----------|---------------|---------------|------|
+| 2023-06   | 3,17          | 3,17          | 2    |
+| 2023-07   | 2,89          | 23,99         | 2    |
+| 2023-08   | 1,12          | 2,45          | 4    |
+| 2023-09   | 0,77          | 2,40          | 2    |
+| 2023-10   | 2,67          | 4,19          | 1    |
+| 2023-11   | 2,49          | 9,89          | 3    |
+| 2023-12   | 3,09          | 7,08          | 4    |
+| 2024-01   | 1,54          | 5,23          | 5    |
+| 2024-02   | 1,93          | 69,41         | 3    |
+| 2024-03   | 12,28         | 12,28         | 1    |
+| 2024-04   | 1,82          | 7,66          | 2    |
+| 2024-05   | 2,69          | 14,77         | 4    |
+| 2024-06   | 1,08          | 2,07          | 1    |
+| 2024-07   | 1,95          | 21,05         | 6    |
+| 2024-08   | 4,78          | 14,82         | 2    |
+| 2024-09   | 1,81          | 16,15         | 4    |
+| 2024-10   | 0,97          | 64,95         | 1    |
+| 2024-11   | 4,47          | 31,64         | 2    |
+| 2024-12   | 3,64          | 4,13          | 2    |
 
 Secara visual, Gambar 5 (lihat `figures/roi_comparison.png`) menunjukkan bahwa:
 
