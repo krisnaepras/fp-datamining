@@ -356,5 +356,4 @@ Namun tentu saja, semua itu datang dengan risiko dan belum mempertimbangkan biay
 Terima kasih sudah menonton, semoga penjelasan ini bermanfaat dan bisa menjadi dasar untuk eksplorasi strategi trading maupun penelitian lanjutan.”
 
 **P3:**  
-“Kalau ada pertanyaan atau saran, silakan disampaikan.  
-Terima kasih, dan sampai jumpa di video berikutnya.”
+“Terima kasih”
