@@ -349,7 +349,7 @@ dan bisa bersaing dengan strategi sederhana buy & hold.
 Namun tentu saja, semua itu datang dengan risiko dan belum mempertimbangkan biaya transaksi.”
 
 **P3:**  
-“Ke depan, penelitian ini bisa dikembangkan lagi dengan memperpanjang periode data, menguji kombinasi parameter Patterned Dataset dan jumlah cluster K yang lebih luas, memasukkan faktor biaya transaksi dan risiko pasar, serta membandingkan Diamond Crash dengan strategi kuantitatif lain di aset kripto maupun instrumen keuangan yang berbeda.”
+“Ke depan, penelitian ini bisa dikembangkan dengan memperpanjang periode data, menguji parameter yang lebih beragam, memasukkan biaya transaksi dan risiko pasar, serta membandingkan strategi Diamond Crash dengan pendekatan kuantitatif lain.”
 
 **P3:**  
 “Sekian presentasi dari kami.  
